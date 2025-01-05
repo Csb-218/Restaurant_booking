@@ -68,7 +68,7 @@ export default function BookingForm() {
 
     try{
 
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER}/available`, 
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER}/bookings/available`, 
         { date: mergeDateAndTime(values.date, values.time)});
 
       if (response.data.availablility === false) {
@@ -78,7 +78,7 @@ export default function BookingForm() {
       else {
 
         try{
-          const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER}/create`, 
+          const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER}/bookings/create`, 
           {
             "Name": values.name,
             "email": values.email,
