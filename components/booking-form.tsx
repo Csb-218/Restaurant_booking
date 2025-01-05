@@ -68,7 +68,7 @@ export default function BookingForm() {
 
     try{
 
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER}/bookings/available`, 
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER}/available`, 
         { date: mergeDateAndTime(values.date, values.time)});
 
       if (response.data.availablility === false) {
@@ -78,7 +78,7 @@ export default function BookingForm() {
       else {
 
         try{
-          const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER}/bookings/create`, 
+          const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER}/create`, 
           {
             "Name": values.name,
             "email": values.email,
@@ -120,7 +120,7 @@ export default function BookingForm() {
           <Form className="space-y-6">
             <div className="space-y-4">
               <div>
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name" className='text-slate-100'>Name</Label>
                 <Field
                   as={Input}
                   id="name"
@@ -136,7 +136,7 @@ export default function BookingForm() {
               </div>
 
               <div>
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email" className='text-slate-100'>Email</Label>
                 <Field
                   as={Input}
                   id="email"
@@ -153,7 +153,7 @@ export default function BookingForm() {
               </div>
 
               <div>
-                <Label htmlFor="phone">Phone</Label>
+                <Label htmlFor="phone" className='text-slate-100'>Phone</Label>
                 <Field
                   as={Input}
                   id="phone"
@@ -169,7 +169,7 @@ export default function BookingForm() {
               </div>
 
               <div>
-                <Label htmlFor="guests">Number of Guests</Label>
+                <Label htmlFor="guests" className='text-slate-100'>Number of Guests</Label>
                 <Field
                   as={Input}
                   id="guests"
@@ -187,7 +187,7 @@ export default function BookingForm() {
               </div>
 
               <div>
-                <Label>Date</Label>
+                <Label className='text-slate-100'>Date</Label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
@@ -219,7 +219,7 @@ export default function BookingForm() {
               </div>
 
               <div>
-                <Label>Time</Label>
+                <Label className='text-slate-100'>Time</Label>
                 <div className="grid grid-cols-4 gap-2 mt-2">
                   {timeSlots.map((slot) => (
                     <Button
@@ -240,7 +240,7 @@ export default function BookingForm() {
               </div>
 
               <div>
-                <Label htmlFor="specialRequests">Special Requests</Label>
+                <Label htmlFor="specialRequests" className='text-slate-100'>Special Requests</Label>
                 <Field
                   as="textarea"
                   id="specialRequests"

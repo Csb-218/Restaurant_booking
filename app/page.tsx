@@ -18,7 +18,7 @@ export default function Home() {
       <main className={` mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[url('https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center`}>
         <div className={`text-center mb-12 `}>
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Reserve Your Table</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">Experience exceptional dining at La Belle Cuisine</p>
+          <p className="text-lg text-gray-100 dark:text-gray-300">Experience exceptional dining at La Belle Cuisine</p>
         </div>
 
         <div className="max-w-2xl mx-auto">
